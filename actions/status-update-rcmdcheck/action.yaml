@@ -1,9 +1,3 @@
-# - name: Update status dashboard
-#   uses: gadenbuie/status/actions/status-update-rcmdcheck@main
-#   with:
-#     github-token-repo-scope: ${{ secrets.GITHUB_STATUS_UPDATE_TOKEN }}
-#     status-repo: gadenbuie/status
-
 name: Update Status
 description: Trigger a status dashboard update
 

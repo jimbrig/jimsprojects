@@ -81,8 +81,13 @@ gh_repo_workflows <- function(repos) {
       badge_url = map_chr(.workflows, "badge_url")
     )
 
-  workflows$runs <- pmap(workflows, gh_runs)
+  args <- list("owner" = workflows$owner,
+               "repo" = workflows$repo,
+               "workflow_id" = workflows$workflow_id)
+
+  workflows$runs <- pmap(args, purrr::possibly(gh_runs, ""))
   workflows %>%
+    filter(purrr::map_chr(runs, pluck, 1) != "") %>%
     mutate(
       event = map_chr(runs, "event"),
       html_url_run = map_chr(runs, "html_url"),
