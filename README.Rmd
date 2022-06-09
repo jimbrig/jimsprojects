@@ -14,6 +14,23 @@ repos:
   - jimstools
   - lossrx
   - lossdevtapp
+  - buildtools
+  - EDA
+  - jimstemplates
+  - jimsghstars
+  - pkgdev
+  - pgres
+  - rdevcontainer
+  - reserver
+  - rezmod
+  - self-insurance-kpi-app
+  - actuarialapp
+  - snippets
+  - shinyshowcase
+  - templateeR
+  - property_allocation_demo
+  rinterface:
+  - shinydashboardPlus
 ---
 
 `r strftime(Sys.time(), "%F %T %Z")`
