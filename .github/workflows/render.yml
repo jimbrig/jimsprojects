@@ -40,7 +40,7 @@ jobs:
           options(repos = c(
             RSPM = "https://packagemanager.rstudio.com/all/__linux__/bionic/latest"
           ))
-          pak::pkg_install(c("rmarkdown", "gh", "memoise", "purrr", "dplyr", "tidyr", "glue", "readr", "gadenbuie/cleanrmd"))
+          pak::pkg_install(c("rmarkdown", "gh", "memoise", "purrr", "dplyr", "tidyr", "glue", "readr", "stringi", "stringr", "gadenbuie/cleanrmd"))
         shell: Rscript {0}
 
       - name: Render Status Page
